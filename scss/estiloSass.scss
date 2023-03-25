@@ -1,0 +1,302 @@
+$color_1: azure;
+$color_2: antiquewhite;
+$font-family_1: 'Roboto', sans-serif;
+$background-color_1: black;
+
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap";
+* {
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: $background-color_1;
+	color: $color_1;
+	padding: 15px;
+	text-transform: uppercase;
+}
+body {
+	background-color: $background-color_1;
+	color: $color_1;
+}
+.bodyIndex {
+	background: url(../img/taylorseis.jpg) no-repeat center;
+	background-size: cover;
+}
+p {
+	font-family: $font-family_1;
+	line-height: 45px;
+	color: $color_1;
+	padding: 150px;
+	margin: 60px 20px 100px 0px;
+	font-size: 20px;
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+	li {
+		display: inline-block;
+	}
+}
+a {
+	text-decoration: none;
+	color: $color_1;
+}
+nav {
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+iframe {
+	margin-top: 100px;
+	justify-content: space-around;
+	margin: auto;
+	margin-bottom: 30px;
+	padding-left: 30%;
+	display: grid;
+	/* se me achicaron los videos aca y no se me arregla*/
+}
+.tituloVideos {
+	text-align: center;
+	margin-top: 40px;
+	margin-right: 70px;
+	margin-bottom: 40px;
+	margin-left: 5px;
+}
+.alineacionDisco {
+	text-align: center;
+}
+.tituloFotos {
+	text-align: center;
+	font-size: 20px;
+}
+h2 {
+	text-align: center;
+	margin-top: 40px;
+	margin-right: 70px;
+	margin-bottom: 40px;
+	margin-left: 5px;
+}
+.biografia {
+	padding-right: 1000px;
+	padding-left: 0px;
+}
+footer {
+	text-align: center;
+}
+fieldset {
+	margin-top: 40px;
+	margin-right: 70px;
+	margin-bottom: 1000px;
+	margin-left: 5px;
+}
+.padreFotos {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.galeriaFotos {
+	padding-bottom: 3em;
+	padding-top: 1em;
+	padding-left: 100px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-flow: auto auto;
+	gap: .8em;
+	grid-template-areas: "hijo1 hijo2" "hijo3 hijo4" "hijo5 hijo6" "hijo7 hijo8" "hijo9 hijo10" "hijo11 hijo12" "hijo13 hijo14" "hijo15 hijo16" "hijo17 hijo18" "hijo19 hijo20" "hijo21 hijo22";
+}
+.padreDos {
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	&::before {
+		content: "TS";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: $background-color_1;
+		transform: scale(0);
+		transition: transform .4s;
+		color: $color_2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+	}
+	&:hover {
+		&::before {
+			transform: scale(1) rotate(360deg);
+		}
+	}
+}
+.hijo1 {
+	grid-area: hijo1;
+}
+.hijo2 {
+	grid-area: hijo2;
+}
+.hijo3 {
+	grid-area: hijo3;
+}
+.hijo4 {
+	grid-area: hijo4;
+}
+.hijo5 {
+	grid-area: hijo5;
+}
+.hijo6 {
+	grid-area: hijo6;
+}
+.hijo7 {
+	grid-area: hijo7;
+}
+.hijo8 {
+	grid-area: hijo8;
+}
+.hijo9 {
+	grid-area: hijo9;
+}
+.hijo10 {
+	grid-area: hijo10;
+}
+.hijo11 {
+	grid-area: hijo11;
+}
+.hijo12 {
+	grid-area: hijo12;
+}
+.hijo13 {
+	grid-area: hijo13;
+}
+.hijo14 {
+	grid-area: hijo14;
+}
+.hijo15 {
+	grid-area: hijo15;
+}
+.hijo16 {
+	grid-area: hijo16;
+}
+.hijo17 {
+	grid-area: hijo17;
+}
+.hijo18 {
+	grid-area: hijo18;
+}
+.hijo19 {
+	grid-area: hijo19;
+}
+.hijo20 {
+	grid-area: hijo20;
+}
+.hijo21 {
+	grid-area: hijo21;
+}
+.hijo22 {
+	grid-area: hijo22;
+}
+
+.discografiaTS {
+list-style-type: none;
+/*se me puso la lista con numeros a la izq y no la puedo sacar, antes no estaba*/
+}
+
+@media (max-width:576px) {
+	.galeriaFotos {
+		grid-template-columns: 90vw;
+		grid-template-rows: auto;
+		grid-template-areas: "hijo1" "hijo2" "hijo3" "hijo4" "hijo5" "hijo6" "hijo7" "hijo8" "hijo9" "hijo10" "hijo11" "hijo12" "hijo13" "hijo14" "hijo15" "hijo16" "hijo17" "hijo18" "hijo19" "hijo20" "hijo21";
+	}
+}
+@media (max-width:768px) {
+	.galeriaFotos {
+		grid-template-columns: 90vw;
+		grid-template-rows: auto;
+		grid-template-areas: "hijo1" "hijo2" "hijo3" "hijo4" "hijo5" "hijo6" "hijo7" "hijo8" "hijo9" "hijo10" "hijo11" "hijo12" "hijo13" "hijo14" "hijo15" "hijo16" "hijo17" "hijo18" "hijo19" "hijo20" "hijo21";
+	}
+}
+
+@media (max-width:768px) {
+	.bodyIndex {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+}
+
+@media screen and (max-width:576px) {
+	.bodyIndex {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+
+@media (max-width:576px) {
+	.biografia {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+
+@media (max-width:576px) {
+	.videosRe {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+
+@media (max-width:768px) {
+	.videosRe {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+@media (max-width:576px) {
+	.discografiaTS {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+@media (max-width:768px) {
+	.discografiaTS {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+
+@media (max-width:576px) {
+	.suscricpionPag {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+@media (max-width:768px) {
+	.suscricpionPag {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+@media (max-width:576px) {
+	.fechasTour {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
+@media (max-width:768px) {
+	.fechasTour {
+		grid-template-columns: 90vw;
+		grid-row: auto;
+	}
+	
+}
